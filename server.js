@@ -20,7 +20,9 @@ app.use(
       "https://backend-82wc.onrender.com/addjobs",
       "https://dazzling-dasik-eb321a.netlify.app/addjobs",
       "https://backend-82wc.onrender.com/getjobs",
-      "https://dazzling-dasik-eb321a.netlify.app/getjobs"
+      "https://dazzling-dasik-eb321a.netlify.app/getjobs",
+      "https://backend-82wc.onrender.com/login",
+      "https://dazzling-dasik-eb321a.netlify.app/login"
     ]
     
     , // <-- location of the react app were connecting to
