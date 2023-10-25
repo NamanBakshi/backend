@@ -27,7 +27,7 @@ app.use(
     
     , // <-- location of the react app were connecting to
       methods: ["GET", "POST", "PATCH", "DELETE"],
-      //credentials: "include",
+      credentials: true,
     })
   );
   
