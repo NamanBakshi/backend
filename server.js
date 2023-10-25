@@ -18,7 +18,9 @@ app.use(
     cors({
       origin: ["https://careerhelp.vercel.app", "https://careerhelp.netlify.app", "http://localhost:5173","https://backend-82wc.onrender.com","https://dazzling-dasik-eb321a.netlify.app",
       "https://backend-82wc.onrender.com/addjobs",
-      "https://dazzling-dasik-eb321a.netlify.app/addjobs"
+      "https://dazzling-dasik-eb321a.netlify.app/addjobs",
+      "https://backend-82wc.onrender.com/getjobs"
+
     ], // <-- location of the react app were connecting to
       methods: ["GET", "POST", "PATCH", "DELETE"],
       credentials: true,
