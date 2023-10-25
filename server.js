@@ -18,7 +18,7 @@ app.use(
     cors({
       origin: ["http://localhost:5173","https://backend-82wc.onrender.com","https://dazzling-dasik-eb321a.netlify.app",
       "https://roaring-biscotti-b0ca08.netlify.app/",
-      "https://roaring-biscotti-b0ca08.netlify.app//jobs"
+      "https://roaring-biscotti-b0ca08.netlify.app/jobs"
 
     ]
     
