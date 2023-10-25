@@ -26,7 +26,7 @@ const addJobController=async(req,res,next)=>{
             //inffo=info
             console.log("info in jwt.verify="+JSON.stringify(info))
             if (err) {
-              res.status(401).json("Not authorized");
+              res.status(401).json("Not authorized by addjobcontroller");
             }
         //console.log("inffo= "+inffo)
         // const jobdata={
