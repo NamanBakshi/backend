@@ -17,12 +17,7 @@ connectDB(MONGO_URL)
 app.use(
     cors({
       origin: ["http://localhost:5173","https://backend-82wc.onrender.com","https://dazzling-dasik-eb321a.netlify.app",
-      "https://backend-82wc.onrender.com/addjobs",
-      "https://dazzling-dasik-eb321a.netlify.app/addjobs",
-      "https://backend-82wc.onrender.com/getjobs",
-      "https://dazzling-dasik-eb321a.netlify.app/getjobs",
-      "https://backend-82wc.onrender.com/login",
-      "https://dazzling-dasik-eb321a.netlify.app/login"
+      
     ]
     
     , // <-- location of the react app were connecting to
