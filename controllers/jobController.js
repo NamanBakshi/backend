@@ -13,10 +13,10 @@ const addJobController=async(req,res,next)=>{
             })
         }
         //console.log("req.cookies= "+(req))
-        const {token}=req.cookies
-        // var res_data = res.json();
-        // var token=res_data.token
-        // console.log("token in addjobcontroller= "+token)
+        //const {token}=req.cookies
+        var res_data = res.json();
+        var token=res_data.token
+        console.log("token in addjobcontroller= "+token)
 
         // if (!token) {
         //     return res.status(403).send({
