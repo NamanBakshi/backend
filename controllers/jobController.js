@@ -13,7 +13,9 @@ const addJobController=async(req,res,next)=>{
             })
         }
         //console.log("req.cookies= "+(req))
-        const {token}=req.cookies
+        //const {token}=req.cookies
+        const res_data = res.json();
+        const token=res_data.token
         console.log("token in addjobcontroller= "+token)
 
         // if (!token) {
@@ -26,7 +28,7 @@ const addJobController=async(req,res,next)=>{
             //inffo=info
             console.log("info in jwt.verify="+JSON.stringify(info))
             if (err) {
-              res.status(401).json("Not authorized by addjobcontroller = "+err+" --req--"+JSON.stringify(req)+"--res-- "+JSON.stringify(res));
+              res.status(401).json("Not authorized by addjobcontroller = "+err+" --req--"+JSON.stringify(req.cookies));
             }
         //console.log("inffo= "+inffo)
         // const jobdata={

@@ -78,7 +78,8 @@ const loginController=async (req,res)=>{
                     message :"Login Successful" ,
                     id:findmail._id,
                     name:findmail.name,
-                    email:findmail.email
+                    email:findmail.email,
+                    token:token
                     }) ;
 
           }
