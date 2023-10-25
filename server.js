@@ -22,10 +22,10 @@ app.use(
     //   "https://backend-82wc.onrender.com/getjobs",\
       
     // ]
-    "Access-Control-Allow-Origin":"https://dazzling-dasik-eb321a.netlify.app"
+    "Access-Control-Allow-Origin":"*"
     , // <-- location of the react app were connecting to
       methods: ["GET", "POST", "PATCH", "DELETE"],
-      credentials: true,
+      //credentials: "include",
     })
   );
   
