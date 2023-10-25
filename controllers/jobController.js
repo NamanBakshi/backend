@@ -14,7 +14,7 @@ const addJobController=async(req,res,next)=>{
         }
         //console.log("req.cookies= "+(req))
         const {token}=req.cookies
-        //console.log(token)
+        console.log("token in addjobcontroller= "+token)
 
         // if (!token) {
         //     return res.status(403).send({
@@ -22,7 +22,7 @@ const addJobController=async(req,res,next)=>{
         //       message: "Please login first",
         //     });
         //   }
-          jwt.verify(token, process.env.SECRET, async (err, info) => {
+          jwt.verify(token, process.env.SECRET,{} ,async (err, info) => {
             //inffo=info
             console.log("info in jwt.verify="+JSON.stringify(info))
             if (err) {

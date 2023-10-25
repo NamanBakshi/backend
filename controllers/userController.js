@@ -19,7 +19,7 @@ const getProfileController=(req,res)=>{
     const { token } = req.cookies;
     jwt.verify(token, process.env.SECRET, {}, (err, info) => {
       if (err) {
-        res.status(401).json("Not authorized");
+        res.status(401).json("Not authorized by getprofilecontroller");
       }
       //console.log("info= "+JSON.stringify(info))
       res.json(info);
