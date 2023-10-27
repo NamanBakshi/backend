@@ -3,10 +3,7 @@ const jwt=require("jsonwebtoken")
 const logoutController=async (req,res)=>{
     try {
                       //name of cookie
-        res.clearCookie("token", {
-        domain: "localhost:5173",
-        httpOnly: true,
-        });
+        //res.clearCookie("token");
         //res.Cookies.Clear()
         res.clearCookie("token")
         res.status(200).json("Logged out successfully");

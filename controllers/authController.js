@@ -70,7 +70,7 @@ const loginController=async (req,res)=>{
                 };
                 //creating a jwt token with the help of jsonwebtoken package
                 var token = jwt.sign(payload,process.env.SECRET);
-                localStorage.setItem('token',token)
+                
                 return  res.cookie("token",token
                 ).status(200).json({
                     success:true ,

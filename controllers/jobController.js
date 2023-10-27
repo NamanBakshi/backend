@@ -3,6 +3,7 @@ const jwt=require("jsonwebtoken")
 
 
 const addJobController=async(req,res,next)=>{
+    
     try{
         const {company,position,location,workfrom}=req.body
 
@@ -14,9 +15,10 @@ const addJobController=async(req,res,next)=>{
         }
         //console.log("req.cookies= "+(req))
         //const {token}=req.cookies
-        const token=localStorage.getItem('token')
+        //const token=localStorage.getItem('token')
         // var res_data = res.json();
         // var token=res_data.token
+        const accesstoken=req.headers.accesstoken
         console.log("token in addjobcontroller= "+token)
 
         if (!token) {
@@ -25,7 +27,7 @@ const addJobController=async(req,res,next)=>{
               message: "Please login first",
             });
           }
-          jwt.verify(token, process.env.SECRET,{} ,async (err, info) => {
+          jwt.verify(accesstoken, process.env.SECRET,{} ,async (err, info) => {
             //inffo=info
             console.log("info in jwt.verify="+JSON.stringify(info))
             if (err) {
