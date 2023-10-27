@@ -74,7 +74,7 @@ const loginController=async (req,res)=>{
                 
                 
                 return  res
-                .cookie("token",token,{ maxAge: 900000})
+                .cookie("token",token,{ maxAge: 900000,domain:["localhost:5173,onrender.com"]})
                 .status(200).json({
                     success:true ,
                     message :"Login Successful" ,
