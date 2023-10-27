@@ -69,12 +69,13 @@ const loginController=async (req,res)=>{
                 name: findmail.name
                 };
                 //creating a jwt token with the help of jsonwebtoken package
-                var token = jwt.sign(payload,process.env.SECRET);
+                const token = jwt.sign(payload,process.env.SECRET);
 
                 
                 
-                return  res.cookie("token",token
-                ).status(200).json({
+                return  res
+                .cookie("token",token)
+                .status(200).json({
                     success:true ,
                     message :"Login Successful" ,
                     id:findmail._id,
