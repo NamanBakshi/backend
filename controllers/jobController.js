@@ -15,11 +15,11 @@ const addJobController=async(req,res,next)=>{
         }
         //console.log("req.cookies= "+(req))
         //const token=req.cookies[token]
-        const token=store[storeToken];
+        //const token=store[storeToken];
         //const token=localStorage.getItem('token')
         // var res_data = res.json();
         // var token=res_data.token
-        //const token=req.headers.Authorization
+        const token=req.Headers.Authorization
         console.log("token in addjobcontroller= "+token)
 
         if (!token) {
