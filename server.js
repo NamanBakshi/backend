@@ -31,6 +31,7 @@ app.use(
   app.use(express.json());
   app.use(cookieParser());
   app.use(authRoute,jobRoute,userRoute);
+  app.set("trust proxy", 1);
 
 
 app.listen(PORT, () => {
