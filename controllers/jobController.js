@@ -21,7 +21,7 @@ const addJobController=async(req,res,next)=>{
         const accesstoken=req.accesstoken
         console.log("token in addjobcontroller= "+token)
 
-        if (!token) {
+        if (!accesstoken) {
             return res.status(403).send({
               success: false,
               message: "Please login first",
