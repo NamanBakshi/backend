@@ -18,7 +18,7 @@ const addJobController=async(req,res,next)=>{
         //const token=localStorage.getItem('token')
         // var res_data = res.json();
         // var token=res_data.token
-        const accesstoken=req.accesstoken
+        const accesstoken=req.headers.Authorization
         console.log("token in addjobcontroller= "+token)
 
         if (!accesstoken) {
