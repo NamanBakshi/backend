@@ -13,7 +13,8 @@ const addJobController=async(req,res,next)=>{
             })
         }
         //console.log("req.cookies= "+(req))
-        const {token}=req.cookies
+        //const {token}=req.cookies
+        const token=localStorage.getItem('token')
         // var res_data = res.json();
         // var token=res_data.token
         console.log("token in addjobcontroller= "+token)
