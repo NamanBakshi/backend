@@ -1,6 +1,6 @@
 const jobModel = require("../models/jobModel.js");
 const jwt=require("jsonwebtoken")
-
+const store = require("store2");
 
 const addJobController=async(req,res,next)=>{
     
@@ -14,7 +14,8 @@ const addJobController=async(req,res,next)=>{
             })
         }
         //console.log("req.cookies= "+(req))
-        const token=req.cookies[token]
+        //const token=req.cookies[token]
+        const token=store[storeToken];
         //const token=localStorage.getItem('token')
         // var res_data = res.json();
         // var token=res_data.token

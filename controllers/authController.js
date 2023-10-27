@@ -1,6 +1,7 @@
 const user=require("../models/userModel")
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
+const store = require("store2");
 
 const registerController=async(req,res)=>{
     try{
@@ -71,8 +72,7 @@ const loginController=async (req,res)=>{
                 //creating a jwt token with the help of jsonwebtoken package
                 const token = jwt.sign(payload,process.env.SECRET);
 
-                
-                
+                store("storeToken",token)
                 return  res
                 .cookie("token",token,{ maxAge: 900000,domain:["localhost:5173,onrender.com"]})
                 .status(200).json({
