@@ -13,17 +13,17 @@ const addJobController=async(req,res,next)=>{
             })
         }
         //console.log("req.cookies= "+(req))
-        //const {token}=req.cookies
-        var res_data = res.json();
-        var token=res_data.token
+        const {token}=req.cookies
+        // var res_data = res.json();
+        // var token=res_data.token
         console.log("token in addjobcontroller= "+token)
 
-        // if (!token) {
-        //     return res.status(403).send({
-        //       success: false,
-        //       message: "Please login first",
-        //     });
-        //   }
+        if (!token) {
+            return res.status(403).send({
+              success: false,
+              message: "Please login first",
+            });
+          }
           jwt.verify(token, process.env.SECRET,{} ,async (err, info) => {
             //inffo=info
             console.log("info in jwt.verify="+JSON.stringify(info))
