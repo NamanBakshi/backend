@@ -70,6 +70,8 @@ const loginController=async (req,res)=>{
                 };
                 //creating a jwt token with the help of jsonwebtoken package
                 var token = jwt.sign(payload,process.env.SECRET);
+
+                
                 
                 return  res.cookie("token",token
                 ).status(200).json({
@@ -78,7 +80,7 @@ const loginController=async (req,res)=>{
                     id:findmail._id,
                     name:findmail.name,
                     email:findmail.email,
-                    token:token
+                    token
                     }) ;
 
           }
